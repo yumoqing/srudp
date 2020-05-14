@@ -192,6 +192,7 @@ class SecureReliableSocket(socket):
         self.address = address = get_formal_address_format(address, self.family)
         address_copy = list(address)
         address_copy[0] = ""  # bind global address
+		print('try to comminate with {}'.format(address))
         self.bind(tuple(address_copy))
         log.debug("try to communicate with {}".format(address))
 
